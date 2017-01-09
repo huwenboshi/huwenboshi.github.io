@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "MM Algorithm"
-date:   2017-01-08
+date:   2017-01-09
 categories: jekyll update
 ---
 

@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "Principal Component Analysis"
+date:   2017-01-10
+categories: jekyll update
+---
+
+### Abstract
+
+This post talks about principal component analysis.
