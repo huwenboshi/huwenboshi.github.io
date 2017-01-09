@@ -4,12 +4,10 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
-
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jglovier" %} /
-[jekyll-new](https://github.com/jglovier/jekyll-new)
-
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+My name is Huwenbo Shi. I'm a Ph.D. candidate in the
+[Bioinformatics Interdepartmental Program](http://bioinformatics.ucla.edu/) at
+UCLA, working with [Prof. Bogdan Pasaniuc](http://bogdan.bioinformatics.ucla.edu/)
+in the field of statistical genetics. In particular, I am developing computational
+methods for analyzing large-scale genetic data to understand the underlying
+genetic architectures of complex traits. Before starting my Ph.D., I obtained
+my B.S. degree in Computer Science also at UCLA.
