@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Mendelian randomization"
+title:  "Mendelian Randomization"
 date:   2017-01-11
 categories: jekyll update
 ---
