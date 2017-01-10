@@ -12,7 +12,8 @@ This post talks about linear mixed model -- what it is, how it's fit, and how it
 
 ### Definition
 
-A linear mixed model is a linear model that contains both fixed effects and random effects, and can be expressed as $\textbf{y} = \textbf{X}\mathbf{\beta} + \textbf{Z}\textbf{u} + \mathbf{\epsilon}$, where $\textbf{y}$ is the response variable, $\textbf{X}$ design matrix for the fixed effects $\mathbf{\beta}$, $\textbf{Z}$ design matrix for the random effects $\textbf{u}$, and $\mathbf{ϵ}$ random noise.
+A linear mixed model is a linear model that contains both fixed effects and random effects, and can be expressed as
+$$\textbf{y} = \textbf{X}\mathbf{\beta} + \textbf{Z}\textbf{u} + \mathbf{\epsilon}$$, where $$\textbf{y}$$ is the response variable, $$\textbf{X}$$ design matrix for the fixed effects $$\mathbf{\beta}$$, $$\textbf{Z}$$ design matrix for the random effects $$\textbf{u}$$, and $$\mathbf{ϵ}$$ random noise.
 
 ### Fitting algorithms
 
