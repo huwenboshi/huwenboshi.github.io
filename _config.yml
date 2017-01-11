@@ -17,4 +17,4 @@ twitter_username: shihuwenbo
 github_username:  huwenboshi
 
 # Build settings
-markdown: redcarpet
+markdown: kramdown
