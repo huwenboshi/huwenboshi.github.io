@@ -5,6 +5,10 @@ date:   2017-01-08
 categories: jekyll update
 ---
 
+<script type="text/javascript" async
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+
 ### Abstract
 
 This post talks about linear mixed model -- what it is, how it's fit, and
