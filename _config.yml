@@ -17,8 +17,7 @@ twitter_username: shihuwenbo
 github_username:  huwenboshi
 
 # Build settings
-#markdown: kramdown
-markdown: maruku
+markdown: kramdown
 
-#kramdown:
-#    math_engine: mathjax
+kramdown:
+    math_engine: mathjax
