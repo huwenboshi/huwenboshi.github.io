@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Linear Mixed Model"
-date:   2017-01-08
+title:  "Linear Mixed Model (Coming Up Next)"
+date:   2017-01-10
 category: statistics
 tags: [mixed model]
 ---
