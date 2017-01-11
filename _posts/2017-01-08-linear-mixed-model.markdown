@@ -2,12 +2,13 @@
 layout: post
 title:  "Linear Mixed Model"
 date:   2017-01-08
-categories: jekyll update
+category: statistics
+tags: [mixed model]
 ---
 
 <script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-  </script>
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
 
 ### Abstract
 
@@ -17,13 +18,11 @@ how it's used in genetics.
 ### Definition
 
 A linear mixed model is a linear model that contains both fixed effects and
-random effects, and can be expressed as
-
-\\( \textbf{y} = \textbf{X}\mathbf{\beta} + \textbf{Z}\textbf{u} + \mathbf{\epsilon} \\)
-
-,where \\( \textbf{y} \\) is the response variable, \\( \textbf{X} \\) design matrix for
-the fixed effects \\( \mathbf{\beta} \\), \\( \textbf{Z} \\) design matrix for the random
-effects \\( \textbf{u} \\), and \\( \mathbf{ϵ} \\) random noise.
+random effects, and is expressed as
+\\( \textbf{y} = \textbf{X}\mathbf{\beta} + \textbf{Z}\textbf{u} + \mathbf{\epsilon} \\),
+where \\( \textbf{y} \\) is the response, \\( \textbf{X} \\) design matrix for
+the fixed effects \\( \mathbf{\beta} \\), \\( \textbf{Z} \\) design matrix for
+the random effects \\( \textbf{u} \\), and \\( \mathbf{ϵ} \\) random noise.
 
 ### Fitting algorithms
 

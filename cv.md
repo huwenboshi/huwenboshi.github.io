@@ -4,8 +4,6 @@ title: Curriculum vitae
 permalink: /cv/
 ---
 
-[PDF]({{ site.url }}/assets/Huwenbo_Shi.pdf){:target="_blank"}
-
 **Education**
 
 * Ph.D. in Bioinformatics, UCLA, 2018
