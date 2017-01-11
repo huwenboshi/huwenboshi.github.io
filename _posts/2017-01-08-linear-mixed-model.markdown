@@ -14,8 +14,10 @@ how it's used in genetics.
 
 A linear mixed model is a linear model that contains both fixed effects and
 random effects, and can be expressed as
-\\( \\textbf{y} = \\textbf{X}\\mathbf{\\beta} + \\textbf{Z}\\textbf{u} + \\mathbf{\\epsilon} \\),
-where \\( \textbf{y} \\) is the response variable, \\( \textbf{X} \\) design matrix for
+
+\\( \textbf{y} = \textbf{X}\mathbf{\beta} + \textbf{Z}\textbf{u} + \mathbf{\epsilon} \\)
+
+,where \\( \textbf{y} \\) is the response variable, \\( \textbf{X} \\) design matrix for
 the fixed effects \\( \mathbf{\beta} \\), \\( \textbf{Z} \\) design matrix for the random
 effects \\( \textbf{u} \\), and \\( \mathbf{ϵ} \\) random noise.
 

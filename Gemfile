@@ -3,3 +3,4 @@ gem 'github-pages', group: :jekyll_plugins
 gem 'minima'
 gem 'rake'
 gem 'redcarpet'
+gem 'github-pages'
