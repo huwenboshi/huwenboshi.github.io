@@ -81,7 +81,7 @@ The following is a list of kernel functions that are widely used (credit to Wiki
 - Polynomial kernel: \\( \mathbf{k}(x_i, x_j) = (x_i^Tx_j + r)^n \text{ for } r > 0 \\)
 - RBF kernel: \\( \mathbf{k}(x_i, x_j) = \exp \left( - { {\|\|x\_i - x\_j\|\|^2} \over {2\sigma^2} } \right)\\)
 
-### Applying Gaussian Process Regression to Gene Mapping and Heritability Estimation
+### Applying Gaussian Process Regression to Heritability Estimation
 
 #### The Kernel Function
 
@@ -104,7 +104,27 @@ decreasing function with a heavy tail concentrated around 0 (see figure below), 
 
 ![Gamma Distribution](/assets/gamma.png)
 
+#### Posterior Distribution of the Parameters
 
+Gaussian Process prior allows one to analytically perform integration over the space of \\( f(\cdot) \\), resulting in a posterior
+for the parameters \\( \theta = (\tau\_1, \cdots, \tau\_p, \theta_0) \\),
+\\[ p(\theta | X, y, \Phi) \propto N(y | 0, \mathbf{K} + \tau\_e^{-1} I) p(\theta | \Phi), \\]
+where \\( p(\theta | \Phi) \\) incoporates the sparsity-inducing priors. The integration step effectively averages over all possible
+\\( f(\cdot) \\), discarding the need to estimate each instance of \\( f(\cdot) \\) separately. This step also increases power to
+detect loci that contribute to phenotypes.
+
+There is no analytical solution to the posterior mode or mean of \\( \theta \\). However, sampling based approach (e.g. MCMC) can be
+used to start from a starting point and lead to the posteior mode. In the Sharp et al. paper, a Hybrid Monte Carlo that models a particle's
+trajectory was used to make inference over \\( \theta \\).
+
+#### Estimating Broad-Sense Heritability
+
+Once the parameters \\( \theta = (\tau\_1, \cdots, \tau\_p, \theta_0) \\) are estimated, one can use these estimates to quantify
+broad-sense heritability from the Gaussian Regression model. The basic idea is as follows:
+
+- For each sample in the training data, one first predits its phenotype using the estimated parameters.
+- The variance of the predicted phenotype can be found analytically using the conditional distribution of multivariate normal.
+- The ratio between the sum of each individual's variance and the phenotype variance gives the broad-sense heritability.
 
 
 
