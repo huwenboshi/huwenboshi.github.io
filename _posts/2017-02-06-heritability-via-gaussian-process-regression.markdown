@@ -91,7 +91,18 @@ the RBF kernel to measure similarity between two individuals, \\( x\_i \\) and \
 \\[ \mathbf{k}(x_i, x_j) = \theta_0 \exp \left( -\sum\_{p=1}^P { {(x\_{ip}-x\_{jp})^2} \over {2 \tau\_p} } \right), \\]
 where \\( \theta\_0 \\) is a parameter that governs the overall similarity between \\( x\_i \\) and \\( x\_j \\), \\( \tau\_p \\)
 the contribution of SNP \\( p \\) to the variations of the phenotype -- a large \\( \tau\_p \\) suggests that SNP \\( p \\)
-contributes little to the variation of the phenotype, and a small \\( \tau\_p \\) implies significant contribution.
+contributes little to the variation of the phenotype, and a small \\( \tau\_p \\) implies significant contribution. By examining
+the magnitude of the hyperparameters \\( \tau\_p \\), one can infer whether a genetic loci contribute significantly to the trait.
+
+#### Sparsity-Inducing Priors
+
+Overfit may occur when the number of parameters to estimate is larger than the amount of data one has. To avoid overfitting and improve
+parsimony of the model, the authors imposed a Gamma prior over the inverse of \\( \tau\_p \\), \\( \tau\_p^{-1} \\). The Gamma prior
+has density function
+\\[ p(\tau\_p^{-1}) = { {(\alpha\_x / \mu\_x)^{\alpha\_x} } \over {\Gamma(\alpha\_x)} } (\tau\_p^{-1})^{(\alpha\_x-1)} \exp \left( - { {\alpha\_x\tau\_p^{-1} } \over {\mu\_x} } \right). \\] Setting \\( \alpha\_x = 0.5 \\) removes any mode in the density function, resulting in a monotonically
+decreasing function with a heavy tail concentrated around 0 (see figure below), enforcing most of \\( \tau\_p^{-1} \\) to be close to zero.
+
+![Gamma Distribution](/assets/gamma.png)
 
 
 
