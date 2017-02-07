@@ -82,3 +82,18 @@ The following is a list of kernel functions that are widely used (credit to Wiki
 - RBF kernel: \\( \mathbf{k}(x_i, x_j) = \exp \left( - { {\|\|x\_i - x\_j\|\|^2} \over {2\sigma^2} } \right)\\)
 
 ### Applying Gaussian Process Regression to Gene Mapping and Heritability Estimation
+
+#### The Kernel Function
+
+Specifying the kernel function is a fundamental step of Gaussian Process Regression. An appropriate kernel allows one to
+model interaction of any order among genetic variations. In the Sharp et al. paper, the authors proposed a generalized version of
+the RBF kernel to measure similarity between two individuals, \\( x\_i \\) and \\( x\_j \\), acorss the genotypes of \\( P \\) SNPs,
+\\[ \mathbf{k}(x_i, x_j) = \theta_0 \exp \left( -\sum\_{p=1}^P { {(x\_{ip}-x\_{jp})^2} \over {2 \tau\_p} } \right), \\]
+where \\( \theta\_0 \\) is a parameter that governs the overall similarity between \\( x\_i \\) and \\( x\_j \\), \\( \tau\_p \\)
+the contribution of SNP \\( p \\) to the variations of the phenotype -- a large \\( \tau\_p \\) suggests that SNP \\( p \\)
+contributes little to the variation of the phenotype, and a small \\( \tau\_p \\) implies significant contribution.
+
+
+
+
+
