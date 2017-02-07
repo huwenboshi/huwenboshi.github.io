@@ -13,13 +13,15 @@ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 ### Summary
 
 The paper "Explaining Missing Heritability Using Gaussian Process Regression" by Sharp et al.
-tries to tackle the problem of missing heritability and the detection of interaction effects
-through Gaussian process regression, a technique widely used in the machine learning community.
-Using Gaussian process regression, the authors obtained estimates of broad-sense heritability
-for several phenotypes in mice and yeast that are significantly larger than the narrow-sense
-heritability of these phenotypes. The authors also deteced several loci displaying interaction
-effects through Gaussian process regression.
+tries to tackle the problem of missing heritability and the detection of higher-order interaction
+effects through Gaussian process regression, a technique widely used in the machine learning community.
+The authors obtained estimates of broad-sense heritability for a number of mice and yeast
+phenotypes that are significantly larger than the narrow-sense heritability of these phenotypes.
+The authors also deteced several loci displaying interaction effects using the same model.
 
 ### Background
 
+#### Heritability
 
+In genetics, phenotypes are usually modeled by
+\\[ y_i = f(x_i) + u_i + \epsilon_i \\]
