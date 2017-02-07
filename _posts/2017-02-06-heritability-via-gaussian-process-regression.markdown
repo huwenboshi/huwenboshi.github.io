@@ -31,7 +31,7 @@ where \\( y_i \\) is the phenotype measurement of the i-th individual, \\( x_i \
 the environmental noise. Here, \\( f(\cdot) \\) is a function that maps the genotype vector into
 a real number. Under this model, heritability is defined the proportion of variance in \\( y_i \\)
 that is due to variation of \\( f(x_i) \\),
-\\[ \text{heritability} = {{\text{Var}[f(x)]} \over {\text{Var}[y]}}. \\]
+\\[ \text{heritability} = {{\text{Var}(f(x))} \over {\text{Var}(y)}} \\]
 
 Different flavors of heritability exist based on the complexity of the \\( f(\cdot) \\) function
 and the input that goes into \\( f(\cdot) \\). In general geneticists work with four types of heritability,
