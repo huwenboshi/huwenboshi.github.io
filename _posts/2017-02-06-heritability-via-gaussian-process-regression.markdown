@@ -81,3 +81,4 @@ The following is a list of kernel functions that are widely used (credit to Wiki
 - Polynomial kernel: \\( \mathbf{k}(x_i, x_j) = (x_i^Tx_j + r)^n \text{ for } r > 0 \\)
 - RBF kernel: \\( \mathbf{k}(x_i, x_j) = \exp \left( - { {\|\|x\_i - x\_j\|\|^2} \over {2\sigma^2} } \right)\\)
 
+### Applying Gaussian Process Regression to Gene Mapping and Heritability Estimation
