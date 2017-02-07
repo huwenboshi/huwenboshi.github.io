@@ -24,8 +24,15 @@ deteced several loci displaying interaction effects.
 
 #### Heritability
 
-In genetics, phenotypes are usually modeled by the following equation
+In genetics, phenotypes are modeled by the following equation
 \\[ y_i = f(x_i) + u_i + \epsilon_i, \\]
 where \\( y_i \\) is the phenotype measurement of the i-th individual, \\( x_i \\) the genotype vector,
 \\( u_i \\) a random effect term that captures relatedness among individuals, and \\( \epsilon_i \\)
-the environmental noise. Here, \\( f(\cdot) \\) is a function that transforms the genotype vector
+the environmental noise. Here, \\( f(\cdot) \\) is a function that maps the genotype vector into
+a real number. Under this model, heritability is defined 
+
+Different flavors of heritability exist based on the complexity of the \\( f(\cdot) \\) function
+and the input that goes into \\( f(\cdot) \\). In general geneticists work with four types of heritability,
+as listed below.
+
+- Broad-sense heritability (\\( H^2 \\))
