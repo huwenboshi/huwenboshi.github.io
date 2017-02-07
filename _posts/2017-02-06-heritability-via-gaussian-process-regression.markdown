@@ -29,12 +29,32 @@ In genetics, phenotypes are modeled by the following equation
 where \\( y_i \\) is the phenotype measurement of the i-th individual, \\( x_i \\) the genotype vector,
 \\( u_i \\) a random effect term that captures relatedness among individuals, and \\( \epsilon_i \\)
 the environmental noise. Here, \\( f(\cdot) \\) is a function that maps the genotype vector into
-a real number. Under this model, heritability is defined the proportion of variance in \\( y_i \\)
+a real number. Under this model, heritability is defined as the proportion of variance in \\( y_i \\)
 that is due to variation of \\( f(x_i) \\),
-\\[ \text{heritability} = {{\text{Var}(f(x))} \over {\text{Var}(y)}} \\]
+\\[ \text{heritability} = { {\text{Var}[f(x)]} \over {\text{Var}[y]} } \\]
 
 Different flavors of heritability exist based on the complexity of the \\( f(\cdot) \\) function
 and the input that goes into \\( f(\cdot) \\). In general geneticists work with four types of heritability,
 as listed below.
 
-- Broad-sense heritability (\\( H^2 \\))
+- Broad-sense heritability (\\( H^2 \\)): Broad-sense heritability is the amount of variance in phenotypes
+that is due to all genetic variations including both additive and epistatic effects. For \\( H^2 \\),
+the function \\( f(\cdot) \\) can be any function that incoporates any order of interactions between genetic
+variations. This is the most general definition of heritability.
+
+- Narrow-sense heritability (\\( h^2 \\)): Narrow-sense heritability is the amount of variance in phenotypes
+that is due to all additive genetic effects. For \\( h^2 \\), the function \\( f(\cdot) \\) is a linear
+function that takes in first-order terms.
+
+- SNP heritability ( \\( h^2_g \\) ): SNP heritability is the amount of variance in phenotypes that is due
+to additive genetic effects of a given set of SNPs. For \\( h^2_g \\), the function \\( f(\cdot) \\) is
+a linear function that takes in a fixed set of SNPs.
+
+- GWAS heritability ( \\( h^2\_{GWAS} \\) ): GWAS heritability is the amount of variance in phenotypes
+that is due to additive genetic effects of GWAS hits. For \\( h^2\_{GWAS} \\), the function \\( f(\cdot) \\)
+is a linear function that takes in GWAS hits only.
+
+Based on the definition of the four flavors of heritability, it follows that \\( H^2 > h^2 \ge h^2_g \ge h^2\_{GWAS} \\).
+The missing heritability problem often refers to the gap between \\( h^2\_{GWAS} \\) and the narrow- / broad- sense
+heritability.
+
