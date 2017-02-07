@@ -58,3 +58,26 @@ Based on the definition of the four flavors of heritability, it follows that \\(
 The missing heritability problem often refers to the gap between \\( h^2\_{GWAS} \\) and the narrow- / broad- sense
 heritability.
 
+
+#### Gaussian Process Regression
+
+Parametric regression problems often involve a function (\\( f(\cdot) \\)), governed by a set of parameters (\\( \theta \\)), that
+maps each input \\( X \\) with a response. For example, in Poisson regression (\\( Y \sim Pois(\lambda = g(X^T\beta)) \\)),
+the distribution of the response variable is characterized by the mean parameter \\( \lambda \\) and the density function of Poisson.
+\\[ { {\lambda^k \exp(-\lambda)} \over {k!} } \\]
+
+Gaussian Process Regression is different from parametric regression in that one does not assume any parametric form for the
+function \\( f(\cdot) \\). Instead, a Gaussian Process prior assumes that the function values of \\( f(\cdot) \\), \\( \mathbf{f} \\),
+for a number of inputs, \\( X \\), follow a multivariate normal distribution,
+\\[ \mathbf{f} \sim N(\mathbf{0}, \mathbf{K}), \\] 
+where \\( \mathbf{K} = (\mathbf{K})\_{ij} = \mathbf{k}(x\_i, x\_j) \\) is the kernel matrix, measuring the similarity between samples,
+that contraints the possible space of \\( f(\cdot) \\). Because the only constraint on the kernel function \\( \mathbf{k}(\cdot, \codt) \\)
+is that the covariance matrix \\( \mathbf{K} \\) is positive definite, this enables Gaussian Process to model a broad range
+of functions.
+
+The following is a list of kernel functions that are widely used (credit to Wikipedia),
+
+- Linear kernel: \\( \mathbf{k}(x_i, x_j) = x_i^Tx_j \\)
+- Polynomial kernel: \\( \mathbf{k}(x_i, x_j) = (x_i^Tx_j + r)^n \text{for} r > 0 \\)
+
+
