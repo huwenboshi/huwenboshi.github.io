@@ -71,13 +71,13 @@ function \\( f(\cdot) \\). Instead, a Gaussian Process prior assumes that the fu
 for a number of inputs, \\( X \\), follow a multivariate normal distribution,
 \\[ \mathbf{f} \sim N(\mathbf{0}, \mathbf{K}), \\] 
 where \\( \mathbf{K} = (\mathbf{K})\_{ij} = \mathbf{k}(x\_i, x\_j) \\) is the kernel matrix, measuring the similarity between samples,
-that contraints the possible space of \\( f(\cdot) \\). Because the only constraint on the kernel function \\( \mathbf{k}(\cdot, \codt) \\)
-is that the covariance matrix \\( \mathbf{K} \\) is positive definite, this enables Gaussian Process to model a broad range
+that contraints the possible space of \\( f(\cdot) \\). Because the only constraint on the kernel function \\( \mathbf{k}(\cdot, \cdot) \\)
+is that the covariance matrix \\( \mathbf{K} \\) is positive definite, this enables Gaussian Process Regression to model a broad range
 of functions.
 
 The following is a list of kernel functions that are widely used (credit to Wikipedia),
 
 - Linear kernel: \\( \mathbf{k}(x_i, x_j) = x_i^Tx_j \\)
-- Polynomial kernel: \\( \mathbf{k}(x_i, x_j) = (x_i^Tx_j + r)^n \text{for} r > 0 \\)
-
+- Polynomial kernel: \\( \mathbf{k}(x_i, x_j) = (x_i^Tx_j + r)^n \text{ for } r > 0 \\)
+- RBF kernel: \\( \mathbf{k}(x_i, x_j) = \exp \left( - { {\|\|x\_i - x\_j\|\|^2} \over {2\sigma^2} } \right)\\)
 
