@@ -28,14 +28,10 @@ come across.
 
 ```
 snp effect_allele other_allele maf effect stderr pvalue
-
 snpid hg18chr bp a1 a2 zscore pval CEUmaf
-
 SNPID CHR POS A1 A2 Freq_HapMap Zscore Pvalue
-
 Chromosome Position MarkerName Effect_allele Non_Effect_allele Beta SE Pvalue
-
 Marker Chrom Pos Allele1 Allele2 Ncases Ncontrols GC.Pvalue Overall
-
 SNPID CHR BP Allele1 Allele2 Freq1 Effect StdErr P.value TotalN
+SNP CHR BP A1 A2 OR SE P INFO EUR_FRQ
 ```
