@@ -29,7 +29,11 @@ a consistent fashion. For example, for the 2014 schizophrenia GWAS summary
 stats data, the file name could be ```SCZ_2014.txt```, and for the 2014
 rheumatoid arthritis GWASs in multiple populations, one could rename the
 files as ```RA_ASN_2014.txt```, ```RA_EURO_2014.txt```, and
-```RA_TE_2014.txt```, where TE stands for transethnic.
+```RA_TE_2014.txt```, where TE stands for transethnic. With each GWAS
+summary stats data, we also recommend to include a readme document to record
+the publication of the GWAS summary data, and the URL the data was
+downloaded from. And the file names of the readme document could be something
+like ```SCZ_2014.readme```.
 
 ### Step 1 - Take A Look at the Header
 
