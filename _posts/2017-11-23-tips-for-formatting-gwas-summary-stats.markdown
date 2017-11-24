@@ -17,8 +17,9 @@ of formats. The diversity of data formats is often attributable to the nature
 of the phenotypes being studied (e.g. case-control trait / quantitative traits)
 and the software used to perform the analysis. However, before anly post-GWAS
 analyses, one needs to convert data in various formats into the same format.
-This page aims to provide some tips, guidelines, and protocols for formatting
-GWAS summary statistics data to help prevent pitfalls in post-GWAS analyses.
+This page aims to provide some tips, guidelines, and protocols that I find
+useful for formatting a lot of GWAS summary statistics data to help prevent
+pitfalls in post-GWAS analyses.
 
 ### Step 0 - Rename, Date, and Record the Publication of the Data
 
@@ -40,8 +41,8 @@ the readme document could be something like ```SCZ_2014.readme```.
 The header of GWAS summary statistics data files tells what type of
 information of the GWAS is available and unavailable in the file. The
 following is a list of some typical headers. If the information that
-you need for your analysis is not in the header (e.g. sample size, number
-of cases and controls, etc.), then you will have to read the GWAS paper
+one need for their analyses is not in the header (e.g. sample size, number
+of cases and controls, etc.), then one will have to read the GWAS paper
 to extract these information.
 
 ```
@@ -59,10 +60,10 @@ Chr Position Allele1 Allele2 Freq1 Pvalue EffN
 
 ### Step 2 - Come up with Your Own Headers
 
-For all GWAS summary stats data
-
-Note that most GWASs do not provide Z-scores directly, but rather effect size
-and its standard error, and some GWASs only provide p-values and effect size.
+Most GWAS summary stats data do not come with all the information one needs.
+For example, it's very often the case that GWAS summary stats file do not
+contain, but rather effect size (odds ratio for case-control traits) and its
+standard error, and some GWASs provide p-values and effect size.
 
 
 For example,
