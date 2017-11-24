@@ -86,7 +86,7 @@ have the following 7 columns in the formatted summary stats file. Other
 informative information such as allele frequency, number of cases and
 controls can be appended after the first 7 columns. We recommend to store
 the processed summary stats files in separate directory named
-```1_Processed```.
+```1_Processed``` .
 
 1. SNP : SNP ID (it's recommended to only include SNPs with rs IDs in the data,
 as these SNPs are often more well-characterized)
