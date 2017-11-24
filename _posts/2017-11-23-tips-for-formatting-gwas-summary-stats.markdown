@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Tips for Formatting GWAS Summary Association Statistics Data"
+title:  "Tips for Formatting A Lot of GWAS Summary Association Statistics Data"
 date:   2017-11-23
 category: data management
 tags: [summary statics]
@@ -161,3 +161,32 @@ panel that one uses)
    (This is to guard against scenarios where some SNPs were genotyped on a
     specialized genotyping array and have substantial more samples than the
     rest.)
+
+The results of these step could be stored in a directory named
+```3_Filtered``` .
+
+In addition to SNP filtering, it's also convenient to align the alleles
+(effect allele and non-effect allele) of each SNP of all processed GWAS
+summary stats data against those of a referenc panel, so that every GWAS
+summary stats has the same effect allele, and non-effect allele. In the
+process, one may need to flip the sign of Z-scores (also effect size, log
+odds ratio, etc.) if the alleles of a SNP in the summary stats is the
+reverse of the alleles of the reference panel. For example if a SNP has
+effect / non-effect alleles as A/G and a Z-score of 1.0 in the summary
+stats, and effect / non-effect alleles as T/C in the reference panel, then
+one changes the alleles A/G to T/C and Z-score to -1.0.
+
+### Step 4 - Making Sure Everything Is Done Correctly
+
+After step 3, the summary stats file should be good to go with running
+LDSC. To make sure that the summary stats file are formatted correctly,
+one could run cross-trait LDSC to see if the genetic correlation between
+a pair of traits is within expectation. It's also helpful to have your
+lab mates go over the pipeline to make sure correctness.
+
+### Conclusion
+
+Formatting GWAS summary stats data can be a daunting task given the various
+kinds of data format out there and the number of pitfalls that can screw
+up your analysis. This page serves to provide some tips, personal ideas to
+handle data formatting and help preventing surprises.
