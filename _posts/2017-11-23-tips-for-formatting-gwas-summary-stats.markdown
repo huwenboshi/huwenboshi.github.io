@@ -25,24 +25,24 @@ GWAS summary statistics data to help prevent pitfalls in post-GWAS analyses.
 GWAS summary stats data files often come with file names that are also all
 over the place. Before looking into the details of the data, we recommend
 to come up with an abbreviation for the phenotype, and rename the files in
-a consistent fashion. For example, for the 2014 schizophrenia GWAS summary
-stats data, the file name could be ```SCZ_2014.txt```, and for the 2014
-rheumatoid arthritis GWASs in multiple populations, one could rename the
-files as ```RA_ASN_2014.txt```, ```RA_EURO_2014.txt```, and
-```RA_TE_2014.txt```, where TE stands for transethnic. With each GWAS
-summary stats data, we also recommend to include a readme document to record
-the publication of the GWAS summary data, and the URL the data was
-downloaded from. And the file names of the readme document could be something
-like ```SCZ_2014.readme```.
+a consistent fashion. This will make your life a lot easier in the long run.
+For example, for the 2014 schizophrenia GWAS summary stats data, the file
+name could be ```SCZ_2014.txt```, and for the 2014 rheumatoid arthritis
+GWASs in multiple populations, one could rename the files as
+```RA_ASN_2014.txt```, ```RA_EURO_2014.txt```, and ```RA_TE_2014.txt```,
+where TE stands for transethnic. With each GWAS summary stats data, we also
+recommend to include a readme document to record the publication of the GWAS
+summary data, and the URL the data was downloaded from. And the file names of
+the readme document could be something like ```SCZ_2014.readme```.
 
 ### Step 1 - Take A Look at the Header
 
-The header of GWAS summary statistics data files tells one what type of
-information of the GWAS is available and unavailable in the file. For example,
-if a GWAS summary stats file does not contain sample size information, then
-one needs to read through the corresponding publication
-
-The following is a list of some typical headers.
+The header of GWAS summary statistics data files tells what type of
+information of the GWAS is available and unavailable in the file. The
+following is a list of some typical headers. If the information that
+you need for your analysis is not in the header (e.g. sample size, number
+of cases and controls, etc.), then you will have to read the GWAS paper
+to extract these information.
 
 ```
 snp effect_allele other_allele maf effect stderr pvalue
@@ -56,3 +56,20 @@ rsID,allele1,allele2,freqA1,beta,se,pval,N
 Marker Chr Position PValue OR(MinAllele) LowerOR UpperOR Alleles(Maj>Min)
 Chr Position Allele1 Allele2 Freq1 Pvalue EffN
 ```
+
+### Step 2 - Come up with Your Own Headers
+
+For all GWAS summary stats data
+
+Note that most GWASs do not provide Z-scores directly, but rather effect size
+and its standard error, and some GWASs only provide p-values and effect size.
+
+
+For example,
+if a GWAS summary stats file does not contain sample size information, then
+one needs to read through the corresponding publication to obtain the sample
+size information.
+
+
+
+
