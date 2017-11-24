@@ -143,7 +143,6 @@ a uniform format that is easy to work with. The next step is to perform
 quality control on the SNPs, i.e. removing SNPs that can screw up your
 analyses. We recommend to apply the following 8 filtering steps:
 
-```
 1. Remove all non-biallelic SNPs
 
 2. Remove all SNPs with strand-ambiguous alleles (SNPs with A/T, C/G alleles)
@@ -164,4 +163,3 @@ panel that one uses)
    (This is to guard against scenarios where some SNPs were genotyped on a
     specialized genotyping array and have substantial more samples than the
     rest.)
-```
