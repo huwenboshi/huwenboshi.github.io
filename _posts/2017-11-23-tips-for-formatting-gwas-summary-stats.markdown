@@ -3,7 +3,7 @@ layout: post
 title:  "Tips for Formatting GWAS Summary Association Statistics Data"
 date:   2017-11-23
 category: data management
-tags: [mixed model]
+tags: [summary statics]
 ---
 
 <script type="text/javascript" async
@@ -72,14 +72,12 @@ For example, it's very often the case that GWAS summary stats file do not
 contain Z-scores, but rather effect size (odds ratio for case-control traits)
 and its standard error, and some GWASs provide p-values and effect size. Since
 Z-score information has been crucial for many summary-data-based software
-such as LDSC, TWAS, and HESS, we recommend to create a separate 
+such as LDSC, TWAS, and HESS, we recommend to create, in a separate dictory
+named ```1_Processed``` that contains processed files with all information
 
 
 For example,
 if a GWAS summary stats file does not contain sample size information, then
 one needs to read through the corresponding publication to obtain the sample
 size information.
-
-
-
 
