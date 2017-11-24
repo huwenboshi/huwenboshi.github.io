@@ -88,28 +88,26 @@ controls can be appended after the first 7 columns. We recommend to store
 the processed summary stats files in separate directory named
 ```1_Processed```.
 
-```
-SNP : SNP ID (it's recommended to only include SNPs with rs IDs in the data,
+1. SNP : SNP ID (it's recommended to only include SNPs with rs IDs in the data,
 as these SNPs are often more well-characterized)
 
-CHR : Chromosome number (some GWAS summary data contain SNPs on chromosome X,
+2. CHR : Chromosome number (some GWAS summary data contain SNPs on chromosome X,
 Y, and MT, but usually these SNPs are filtered out during QC)
 
-BP : Base pair positions (make sure all formatted summary stats use the same
+3. BP : Base pair positions (make sure all formatted summary stats use the same
 genome build)
 
-A1 : Effect allele (also sometimes called risk allele, reference allele,
+4. A1 : Effect allele (also sometimes called risk allele, reference allele,
 effect allele, coded allele, etc.)
 
-A2 : Non-effect allele (also some times called alternate allele, the other
+5. A2 : Non-effect allele (also some times called alternate allele, the other
 allele etc.)
 
-Z : Z-score with respect to the effect allele, i.e. if Z-score is positive
+6. Z : Z-score with respect to the effect allele, i.e. if Z-score is positive
 then the effect allele increases the phenotype
 
-N - Sample size (this is often the discovery stage sample size, not maximum
+7. N - Sample size (this is often the discovery stage sample size, not maximum
 sample size)
-```
 
 #### Note on Computing Z-scores
 
