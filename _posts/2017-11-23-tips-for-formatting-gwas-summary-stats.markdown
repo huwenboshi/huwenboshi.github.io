@@ -34,7 +34,9 @@ GWASs in multiple populations, one could rename the files as
 where TE stands for transethnic. With each GWAS summary stats data, we also
 recommend to include a readme document to record the publication of the GWAS
 summary data, and the URL the data was downloaded from. And the file names of
-the readme document could be something like ```SCZ_2014.readme```.
+the readme document could be something like ```SCZ_2014.readme```. Lastly,
+we recommend to store all the readme files and freshly downloaded summary
+stats files in a folder called ```0_Raw```.
 
 ### Step 1 - Take A Look at the Header
 
@@ -44,6 +46,11 @@ following is a list of some typical headers. If the information that
 one need for their analyses is not in the header (e.g. sample size, number
 of cases and controls, etc.), then one will have to read the GWAS paper
 to extract these information.
+
+Note that some GWASs report the total sample size, which includes samples both
+in the discovery stage, and samples in the replication stage. However,
+it's often the case that sample size of the discovery GWAS stage is the
+one that matches the data.
 
 ```
 snp effect_allele other_allele maf effect stderr pvalue
@@ -62,8 +69,10 @@ Chr Position Allele1 Allele2 Freq1 Pvalue EffN
 
 Most GWAS summary stats data do not come with all the information one needs.
 For example, it's very often the case that GWAS summary stats file do not
-contain, but rather effect size (odds ratio for case-control traits) and its
-standard error, and some GWASs provide p-values and effect size.
+contain Z-scores, but rather effect size (odds ratio for case-control traits)
+and its standard error, and some GWASs provide p-values and effect size. Since
+Z-score information has been crucial for many summary-data-based software
+such as LDSC, TWAS, and HESS, we recommend to create a separate 
 
 
 For example,
