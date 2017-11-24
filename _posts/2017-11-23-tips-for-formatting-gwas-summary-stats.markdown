@@ -112,10 +112,22 @@ sample size)
 If effect size and standard error are included in the freshly downloaded GWAS
 summary stats file, then Z-score can be computed as
 \\[
-  z = {\text{Effect Size} \over {S.E.}}
+  Z = {\text{Effect Size} \over {S.E.}}
 \\]
 
 If odds ratio and standard error are include, then Z-score can be computed as
 \\[
-  z = {\log (\text{Odds Ratio}) \over {S.E.}}
+  Z = {\log (\text{Odds Ratio}) \over {S.E.}}
 \\]
+
+If p-value and effect size (odds ratio) are available then Z-score can be
+computed as
+\\[
+  Z = \text{sign(Effect Size)} \times |\Psi^{-1}(p / 2)|
+\\]
+or
+\\[
+  Z = \text{sign(log Odds Ratio)} \times |\Psi^{-1}(p / 2)|
+\\],
+where \\(\Psi^{-1}\\) is the inverse cumulative distribution function of the
+normal distribution.
