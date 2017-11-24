@@ -82,7 +82,11 @@ and its standard error, and some GWASs provide p-values and effect size. Since
 Z-score information is used in many summary-data-based software such as LDSC
 and HESS, it's highly recommended to include Z-score information in the
 formatted summary stats file. In general, it's highly convenient to always
-have the following 7 columns in the formatted summary stats file.
+have the following 7 columns in the formatted summary stats file. Other
+informative information such as allele frequency, number of cases and
+controls can be appended after the first 7 columns. We recommend to store
+the processed summary stats files in separate directory named
+```1_Processed```.
 
 ```
 SNP : SNP ID (it's recommended to only include SNPs with rs IDs in the data,
@@ -123,11 +127,41 @@ If odds ratio and standard error are include, then Z-score can be computed as
 If p-value and effect size (odds ratio) are available then Z-score can be
 computed as
 \\[
-  Z = \text{sign(Effect Size)} \times |\Psi^{-1}(p / 2)|
+  Z = \text{sign(Effect Size)} \times |\Phi^{-1}(p / 2)|
 \\]
 or
 \\[
-  Z = \text{sign(log Odds Ratio)} \times |\Psi^{-1}(p / 2)|
+  Z = \text{sign(log Odds Ratio)} \times |\Phi^{-1}(p / 2)|
 \\],
-where \\(\Psi^{-1}\\) is the inverse cumulative distribution function of the
+where \\(\Phi^{-1}\\) is the inverse cumulative distribution function of the
 normal distribution.
+
+### Step 3 - Quality Control and Align the Alleles Against A Reference Panel
+
+By step 2, all the freshly downloaded GWAS summary stats file should be in
+a uniform format that is easy to work with. The next step is to perform
+quality control on the SNPs, i.e. removing SNPs that can screw up your
+analyses. We recommend to apply the following 8 filtering steps:
+
+```
+1. Remove all non-biallelic SNPs
+
+2. Remove all SNPs with strand-ambiguous alleles (SNPs with A/T, C/G alleles)
+
+3. Removed SNPs without rs IDs, duplicated rs IDs or base pair position.
+
+4. Removed SNPs not in 1000 Genomes Project Phase 3 (or any other reference
+panel that one uses) 
+
+5. Removed SNPs whose base pair positions or alleles doesn't match those in
+1000GP Phase 3 (or any other reference panel)
+
+6. Removed SNPs with imputation INFO less than 0.9 (if INFO is provided)
+
+7. Removed all SNPs on chromosome X, Y, and MT
+
+8. Removed SNPs with sample size 5 standard deviations away from the mean.
+   (This is to guard against scenarios where some SNPs were genotyped on a
+    specialized genotyping array and have substantial more samples than the
+    rest.)
+```
