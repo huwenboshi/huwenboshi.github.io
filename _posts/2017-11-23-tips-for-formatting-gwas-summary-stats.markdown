@@ -15,7 +15,7 @@ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 Publicly available GWAS summary association statistics data are in all kinds
 of formats. The diversity of data formats is often attributable to the nature
 of the phenotypes being studied (e.g. case-control trait / quantitative traits)
-and the software used to perform the analysis. However, before anly post-GWAS
+and the software used to perform the analysis. However, before any post-GWAS
 analyses, one needs to convert data in various formats into the same format.
 This page aims to provide some tips, guidelines, and protocols that I find
 useful for formatting a lot of GWAS summary statistics data to help prevent
