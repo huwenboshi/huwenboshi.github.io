@@ -16,17 +16,30 @@ I am working as a TA for a sequencing algorithm class at UCLA this quarter.(By
 the way, if you are a first year PhD student reading this blog post, be sure
 to get the TA requirement out of the way as soon as possible -- working as a
 TA, doing research, and looking for jobs all at the same time is a
-nightmare...) Anyway, I post my slides here on the off chance that someone
-finds them useful.
+nightmare...) Anyway, I post my slides (with animations to illustrate how each
+algorithm works) here on the off chance that someone finds them useful.
 
 ### Week 1 -- Python Basics
 
+...in which I went over basic python syntax, data stucture, and etc.
 
+You may view the slides [here](https://docs.google.com/presentation/d/1xgzWxLkI2MGdjLFbPqFLvDPWbgx7kH8B9KdxgO2zYk8/edit?usp=sharing).
 
 ### Week 2 -- Burrows-Wheeler Transform
 
+...in which I went over how to build a BWT, string reconstruction using BWT,
+and FM-index backward search.
+
 ### Week 3 -- Motif Search
+
+...in which I went over how to find motifs from a list of DNA sequences.
 
 ### Week 4 -- Graph Basics
 
+...in which I went over representation of graphs, Hamiltonian cycle, and
+Eulerian cycle.
+
 ### Week 5 -- Alignment Algorithms
+
+...in which I went over edit distance, Needleman-Wunsch algorithm, and
+Smith-Waterman algorithm.
