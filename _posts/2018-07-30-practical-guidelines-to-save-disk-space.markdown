@@ -15,17 +15,17 @@ degrade computational performance.
 
 If you use Python, you may read and write gzip files as shown below:
 
-```
-import gzip
-fhandle = gzip.open('<file name>', 'r')  # open gzip file to read
-fhandle = gzip.open('<file name>', 'w')  # open gzip file to write
-```
+    ```
+    import gzip
+    fhandle = gzip.open('<file name>', 'r')  # open gzip file to read
+    fhandle = gzip.open('<file name>', 'w')  # open gzip file to write
+    ```
 
 You may also gzip standard out by piping the output to gzip:
 
-```
-<standard output> | gzip > output.gz
-```
+    ```
+    <standard output> | gzip > output.gz
+    ```
 
 2. **Archive or delete inactive projects** -- if you haven't touched something
 for more than half a year, then you probably don't really need it in the very
@@ -34,13 +34,13 @@ near future, so why keep it around?
 You can easily compress an entire project in 2 steps while working on
 other things:
 
-```
-# step 1: get on an interactive node with sufficient time and memory
-qrsh -l h_rt=24:00:00,h_data=32G
+    ```
+    # step 1: get on an interactive node with sufficient time and memory
+    qrsh -l h_rt=24:00:00,h_data=32G
 
-# step 2: compress your project
-tar czvf project_name.tar.gz project_name/
-```
+    # step 2: compress your project
+    tar czvf project_name.tar.gz project_name/
+    ```
 
 3. **Use the scratch space ($SCRATCH) as much as possible** -- everyone
 has 2 TB of space under the $SCRATCH directory that is cleaned up every
@@ -50,9 +50,9 @@ you may execute the following command once every two weeks to update the
 timestamp of every file in scratch space so that they won't be deleted by the
 file system:
 
-```
-find  -type f  -exec touch {} +
-```
+    ```
+    find  -type f  -exec touch {} +
+    ```
 
 4. **Test your code on an interactive node first before sending it to the
 entire cluster** -- some times your code may incorrectly produce thousands
@@ -64,9 +64,9 @@ make sure that no \*.core files are generated.
 increase in your disk usage, find the issue and figure out ways to decrease
 disk usage. Checking disk usage can be done using the command:
 
-```
-myquota -g <group name>
-```
+    ```
+    myquota -g <group name>
+    ```
 
 6. **Communicate extremely large disk usage** -- if you absolutely need to
 occupy a large fraction of disk space, please let everyone know, so that we
