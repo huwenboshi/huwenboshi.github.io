@@ -6,6 +6,13 @@ category: computer cluster
 tags: [disk space]
 ---
 
+Disk space on computer clusters is usually shared by many people. Although
+hard disks are getting cheaper and cheaper these days, using disk space
+without any restriction may cause disk space deficiency periodically, which
+can lead to frustration, stress, anxiety, or even depression, especially
+when it suddenly happens before a deadline. Below, I summarize 8 simple
+rules to (hopefully) help keep disk space available all the time.
+
 0. **Be mindful of others** -- do to others as you would have them do to you.
 If you want others to save disk space for you, save disk space for others.
 
@@ -21,6 +28,10 @@ gzip files as shown below:
 You may also gzip standard out by piping the output to gzip:
     ```
     <standard output> | gzip > output.gz
+    ```
+You mean peek into a compressed gzip file using, for example,
+    ```
+    zcat <compressed file>.gz | less
     ```
 
 2. **Archive or delete inactive projects** -- if you haven't touched something
