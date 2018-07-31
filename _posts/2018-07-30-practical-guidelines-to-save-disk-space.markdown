@@ -11,29 +11,22 @@ If you want others to save disk space for you, save disk space for others.
 
 1. **Compress as much as possible** -- using gzip to save simulations and
 results can easily save half of the space required, and won't significantly
-degrade computational performance.
-
-If you use Python, you may read and write gzip files as shown below:
-
+degrade computational performance. If you use Python, you may read and write
+gzip files as shown below:
     ```
     import gzip
     fhandle = gzip.open('<file name>', 'r')  # open gzip file to read
     fhandle = gzip.open('<file name>', 'w')  # open gzip file to write
     ```
-
 You may also gzip standard out by piping the output to gzip:
-
     ```
     <standard output> | gzip > output.gz
     ```
 
 2. **Archive or delete inactive projects** -- if you haven't touched something
 for more than half a year, then you probably don't really need it in the very
-near future, so why keep it around?
-
-You can easily compress an entire project in 2 steps while working on
-other things:
-
+near future, so why keep it around? You can easily compress an entire project
+in 2 steps while working on other things:
     ```
     # step 1: get on an interactive node with sufficient time and memory
     qrsh -l h_rt=24:00:00,h_data=32G
@@ -49,7 +42,6 @@ results (e.g. simulated data). If you are afraid of losing data on $SCRATCH,
 you may execute the following command once every two weeks to update the
 timestamp of every file in scratch space so that they won't be deleted by the
 file system:
-
     ```
     find  -type f  -exec touch {} +
     ```
