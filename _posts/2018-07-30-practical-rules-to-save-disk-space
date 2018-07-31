@@ -1,0 +1,71 @@
+---
+layout: post
+title:  "Practical rules to save disk space"
+date:   2018-07-30
+category: computer cluster
+tags: [disk space]
+---
+
+<script type="text/javascript" async
+src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+0. Be mindful of others -- do to others as you would have them do to you.
+If you want others to save disk space for you, save disk space for others.
+
+1. Compress as much as possible -- using gzip to save simulations and
+results can easily save half of the space required, and won't significantly
+degrade computational performance.
+
+If you use Python, you may read and write gzip files as shown below:
+
+import gzip
+fhandle = gzip.open('<file name>', 'r')  # open gzip file to read
+fhandle = gzip.open('<file name>', 'w')  # open gzip file to write
+
+You may also gzip standard out by piping the output to gzip:
+
+<standard output> | gzip > output.gz
+
+2. Archive or delete inactive projects -- if you haven't touched something
+for more than half a year, then you probably don't really need it in the very
+near future, so why keep it around?
+
+You can easily compress an entire project in 2 steps while working on
+other things:
+
+# step 1: get on an interactive node with sufficient time and memory
+qrsh -l h_rt=24:00:00,h_data=32G
+
+# step 2: compress your project
+tar czvf project_name.tar.gz project_name/
+
+3. Use the scratch space ($SCRATCH) as much as possible -- everyone
+has 2 TB of space under the $SCRATCH directory that is cleaned up every
+two weeks. This type of disk space is perfect for storing large intermediate
+results (e.g. simulated data). If you are afraid of losing data on $SCRATCH,
+you may execute the following command once every two weeks to update the
+timestamp of every file in scratch space so that they won't be deleted by the
+file system:
+
+find  -type f  -exec touch {} +
+
+4. Test your code on an interactive node first before sending it to the
+entire cluster -- some times your code may incorrectly produce thousands
+of large *.core files that can easily use up the entire disk space in the blink
+of an eye. You should also monitor your jobs for the first several minutes to
+make sure that no *.core files are generated.
+
+5. Periodically check your disk usage -- if you see an unexpected sharp
+increase in your disk usage, find the issue and figure out ways to decrease
+disk usage. Checking disk usage can be done using the command:
+
+myquota -g pasaniuc
+
+6. Communicate extremely large disk usage -- if you absolutely need to
+occupy a large fraction of disk space, please let everyone know, so that we
+can all get prepared.  
+
+7. Avoid duplicates -- always check to see if the data you need is already
+on the cluster, especially if the data is extremely large (e.g. 1000G, GTEx,
+UK Biobank, etc.).
