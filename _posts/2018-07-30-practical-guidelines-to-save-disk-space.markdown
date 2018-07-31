@@ -50,7 +50,9 @@ you may execute the following command once every two weeks to update the
 timestamp of every file in scratch space so that they won't be deleted by the
 file system:
 
+```
 find  -type f  -exec touch {} +
+```
 
 4. **Test your code on an interactive node first before sending it to the
 entire cluster** -- some times your code may incorrectly produce thousands
@@ -62,7 +64,9 @@ make sure that no \*.core files are generated.
 increase in your disk usage, find the issue and figure out ways to decrease
 disk usage. Checking disk usage can be done using the command:
 
-myquota -g pasaniuc
+```
+myquota -g <group name>
+```
 
 6. **Communicate extremely large disk usage** -- if you absolutely need to
 occupy a large fraction of disk space, please let everyone know, so that we
