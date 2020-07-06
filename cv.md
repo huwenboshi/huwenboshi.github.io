@@ -4,6 +4,10 @@ title: Curriculum vitae
 permalink: /cv/
 ---
 
+**Current**
+
+Postdoctoral Research Fellow, Harvard T.H. Chan School of Public Health
+
 **Education**
 
 * Ph.D. in Bioinformatics, UCLA, 2018
