@@ -195,7 +195,7 @@ GEM
       gemoji (~> 3.0)
       html-pipeline (~> 2.2)
       jekyll (>= 3.0, < 5.0)
-    json (1.8.6)
+    json (2.3.0)
     kramdown (1.17.0)
     libv8 (3.16.14.19)
     liquid (4.0.3)
@@ -257,7 +257,7 @@ DEPENDENCIES
   academic
   github-pages
   jekyll-data
-  json (~> 1.8.6)
+  json (~> 2.3.0)
   rake
   redcarpet
   therubyracer (~> 0.12.3)
