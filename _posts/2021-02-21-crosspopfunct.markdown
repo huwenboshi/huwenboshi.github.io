@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Population-specific Disease Effect Sizes and Where to Find Them"
+title:  "Population-specific Genetic Effects and Where to Find Them"
 date:   2021-02-21
 category: genetics
 tags: [cross-population]
@@ -60,13 +60,16 @@ to perform future genetic studies.
 
 ### What did we find?
 
-We analyzed the studies of 31 diseases and complex traits from UK Biobank (Europeans)
+We analyzed genetic studies of 31 diseases and complex traits from UK Biobank (Europeans)
 and Biobank Japan (East Asians). Averaging across the traits, we found that
 the cross-population genetic correlation across East Asians and Europeans was
 about 0.85, although for some traits this quantity was much lower (e.g. ~0.3
 for major depressive disorer). This results suggest that genetic effects
 in different populations are, overall, similar to each other. But, they are
-not *exactly* the same, suggesting genetic effects are dissimilar, in
+not *exactly* the same, suggesting that genetic effects are dissimilar, in
 other words, population-specific, for some parts of the genome.
+
+We then looked specifically for components of the human genome that have
+population-specific
 
 ### What are the implications?
