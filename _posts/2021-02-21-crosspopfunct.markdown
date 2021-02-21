@@ -17,7 +17,7 @@ blog post, I hope to give a simple and intuitive understanding of our work to a 
 
 ### What did we study?
 
-We studied the effects of genetic variants have on diseases
+We studied the effects genetic variants have on diseases
 and traits across different populations (East Asians and Europeans, in particular).
 In summary, we wanted to answer the following questions.
 
