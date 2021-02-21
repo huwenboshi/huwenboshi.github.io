@@ -21,8 +21,7 @@ We studied the effects of genetic variants have on diseases
 and traits across different populations (East Asians and Europeans, in particular).
 In summary, we wanted to answer the following questions.
 
-1. How similar/dissimilar are genetic effects across different populations,
-across the entire human genome?
+1. How similar/dissimilar are genetic effects across different populations overall?
 
 2. For which components of the human genome are genetic effects more similar/dissimilar
 across populations, compared to the rest of the genome?
@@ -63,13 +62,32 @@ to perform future genetic studies.
 We analyzed genetic studies of 31 diseases and complex traits from UK Biobank (Europeans)
 and Biobank Japan (East Asians). Averaging across the traits, we found that
 the cross-population genetic correlation across East Asians and Europeans was
-about 0.85, although for some traits this quantity was much lower (e.g. ~0.3
+about 0.85%, although for some traits this quantity was much lower (e.g. ~30%
 for major depressive disorer). This results suggest that genetic effects
 in different populations are, overall, similar to each other. But, they are
 not *exactly* the same, suggesting that genetic effects are dissimilar, in
 other words, population-specific, for some parts of the genome.
 
 We then looked specifically for components of the human genome that have
-population-specific
+population-specific genetic effects. To our surprise, we found them in
+functionally important components of the genome, such as gene regions, and
+regions that regulate levels of expression of genes! This revealation is
+in direct contrast to what we expected at the beginning of this project -- we
+were expecting to find more shared genetic effects in functionally important
+regions of the genome.
+
+Now that we knew there are more population-specific genetic effects around
+gene regions. We wanted to further understand what biological processes could
+lead to such observations. To this end, we looked at trans-ethnic genetic
+correlation in different sets of gene regions. Specifically, we looked at
+regions of the genes that are specifically expressed in a tissue (e.g.
+brain, liver, spleen, etc.). From this analysis, we realized that not all
+gene regions have the same level of population-specific genetic effects.
+For example, regions of immune genes have more population-specific
+genetic effects, whereas regions of brain genes have less population-specific
+genetic effects. Since immune genes are typically associated with positive selection
+and brain genes negative selection, we conjecture that population-specific
+genetic effects have something to do with gene-environment interactions
+at genomic regions impacted by positive selection.
 
 ### What are the implications?
