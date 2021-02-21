@@ -24,13 +24,18 @@ In summary, we wanted to answer the following questions.
 1. How similar/dissimilar are genetic effects across different populations,
 across the entire human genome?
 
-2. Where on the human genome are genetic effects more similar/dissimilar
+2. For which components of the human genome are genetic effects more similar/dissimilar
 across populations, compared to the rest of the genome?
 
 The metric we used to assess similarity/dissimilarity in genetic effects
 across populations is called trans-ethnic genetic correlation,
 which,as the name suggests, measures the correlation of genetic
 effects in different populations.
+
+We developed a [statistical tool](https://github.com/huwenboshi/s-ldxr) to
+quantify trans-ethnic genetic correlation for the entire genome, and for
+specific components of the human genome, such gene regions, and regions
+that regulates expression of genes, etc.
 
 ### Why do we care?
 
@@ -48,14 +53,20 @@ This limited cross-population transferrability is often attributed to difference
 and correlation patterns of genetic variants in different populations. But
 we are curious if the limited transferrability can be also driven by
 specific differences in the underlying genetic effects in important part
-of the human genome. Investigating if this is indeed the case can provide
-additional understanding of the sources of limited cross-population
-transferrability.
-
-### How did we do it?
-
+of the human genome (e.g. around genes). Investigating if this is indeed the
+case can provide additional understanding of the sources of limited
+cross-population transferrability, and may guide genetic researchers on how
+to perform future genetic studies.
 
 ### What did we find?
 
+We analyzed the studies of 31 diseases and complex traits from UK Biobank (Europeans)
+and Biobank Japan (East Asians). Averaging across the traits, we found that
+the cross-population genetic correlation across East Asians and Europeans was
+about 0.85, although for some traits this quantity was much lower (e.g. ~0.3
+for major depressive disorer). This results suggest that genetic effects
+in different populations are, overall, similar to each other. But, they are
+not *exactly* the same, suggesting genetic effects are dissimilar, in
+other words, population-specific, for some parts of the genome.
 
 ### What are the implications?
