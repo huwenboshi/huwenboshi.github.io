@@ -28,10 +28,10 @@ across the entire genome?
 across populations, compared to the rest of the genome?
 
 The metric we used to assess similarity/dissimilarity in genetic effects
-across populations is called trans-ethnic genetic correlation,
+across populations is called cross-population genetic correlation,
 which,as the name suggests, measures the correlation of genetic
 effects in different populations. We developed a [statistical tool](https://github.com/huwenboshi/s-ldxr) to
-quantify trans-ethnic genetic correlation for the entire genome, and for
+quantify cross-population genetic correlation for the entire genome, and for
 specific components of the human genome, such gene regions, and regions
 that regulates expression of genes, etc.
 
@@ -77,7 +77,7 @@ regions of the genome.
 
 Now that we knew there are more population-specific genetic effects around
 gene regions. We wanted to further understand what biological processes could
-lead to such observations. To this end, we looked at trans-ethnic genetic
+lead to such observations. To this end, we looked at cross-population genetic
 correlation in different subsets of gene regions. Specifically, we looked at
 regions of the genes that are specifically expressed in a tissue (e.g.
 brain, liver, spleen, etc.). From this analysis, we realized that not all
@@ -100,7 +100,12 @@ These predictors tend to be around gene regions, and other functionally
 important genomic regions. However, our results showing there are more
 population-specific genetic effects around gene regions, suggest that these
 approaches might not be optimal, because the effects of these predictors
-might be different on non-Europeans than they are on Europeans. And a more
-accurate approach should select genetic predictors, based on how important
+might be different on non-Europeans than they are on Europeans. A more
+accurate approach should select and prioritize genetic predictors, based on how important
 they are in the European study, and how likely they will have the same effect
 in the target non-European populations.
+
+Since we hypothesize that gene-environment interaction is likely stronger
+in functionally important genomic regions, we also think it would be important
+for future genetic studies to collect and model environmental effects,
+to better reveal the *true* genetic effects.
