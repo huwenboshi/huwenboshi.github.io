@@ -18,21 +18,39 @@ blog post, I hope to give a simple and intuitive understanding of our work to a 
 ### What did we study?
 
 We studied the effects of genetic variants have on diseases
-and traits across different populations. In summary, we wanted to answer the
-following questions.
+and traits across different populations (East Asians and Europeans, in particular).
+In summary, we wanted to answer the following questions.
 
 1. How similar/dissimilar are genetic effects across different populations,
 across the entire human genome?
 
-2. Where on the human genome are genetic effects  more similar/dissimilar
+2. Where on the human genome are genetic effects more similar/dissimilar
 across populations, compared to the rest of the genome?
 
 The metric we used to assess similarity/dissimilarity in genetic effects
-across populations is called trans-ethnic genetic correlation (\\( r_g \\)),
-which measures the correlation of genetic effects in different populations.
+across populations is called trans-ethnic genetic correlation,
+which,as the name suggests, measures the correlation of genetic
+effects in different populations.
 
 ### Why do we care?
 
+First, some background. Genetic studies have been rare
+for non-European populations. In fact, non-European populations only make up
+20% of genetic studies, which is very small, considering about 90% of the world
+populations are non-Europeans. Because genetic study in non-Europeans is so limited,
+it makes the most practical sense to transfer what we can learn fron
+Europeans to non-Europeans. But the transferrability seems limited. For example,
+in genetic risk prediction using genetic effects learned from Europeans, the
+relative prediction accuracy for non-Europeans can
+be 50% to 80% lower compared to that for Europeans (see this [paper](https://www.nature.com/articles/s41588-019-0379-x?WT.ec_id=NG-201904&sap-outbound-id=2C9E78DECC81D5016FE335EAE68FF5C714553CD4)).
+
+This limited cross-population transferrability is often attributed to differences in frequencies
+and correlation patterns of genetic variants in different populations. But
+we are curious if the limited transferrability can be also driven by
+specific differences in the underlying genetic effects in important part
+of the human genome. Investigating if this is indeed the case can provide
+additional understanding of the sources of limited cross-population
+transferrability.
 
 ### How did we do it?
 
