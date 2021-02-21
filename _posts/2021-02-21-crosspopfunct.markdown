@@ -97,12 +97,14 @@ risk prediction. Most existing approaches to perform cross-population
 genetic risk prediction first select some candidate genetic predictors
 based on European studies, and then apply those predictors on non-Europeans.
 These predictors tend to be around gene regions, and other functionally
-important genomic regions. However, our results showing there are more
-population-specific genetic effects around gene regions, suggest that these
-approaches might not be optimal, because the effects of these predictors
+important genomic regions. This strategy of selecting predictors is intuitive,
+as genetic variants important for Europeans are also likely to be important
+for non-Europeans. However, our results showing there are more
+population-specific genetic effects around gene regions, suggest that this strategy
+might not be optimal, because the effects of these predictors
 might be different on non-Europeans than they are on Europeans. A more
-accurate approach should select and prioritize genetic predictors, based on how important
-they are in the European study, and how likely they will have the same effect
+accurate approach should select and prioritize genetic predictors, not only based on how important
+they are in the European study, but also on how likely they will have the same effect
 in the target non-European populations.
 
 Since we hypothesize that gene-environment interaction is likely stronger
