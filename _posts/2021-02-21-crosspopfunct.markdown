@@ -29,10 +29,10 @@ across populations, compared to the rest of the genome?
 
 The metric we used to assess similarity/dissimilarity in genetic effects
 across populations is called cross-population genetic correlation,
-which,as the name suggests, measures the correlation of genetic
+which, as the name suggests, measures the correlation of genetic
 effects in different populations. We developed a [statistical tool](https://github.com/huwenboshi/s-ldxr) to
 quantify cross-population genetic correlation for the entire genome, and for
-specific components of the human genome, such gene regions, and regions
+specific components of the human genome, such as gene regions, and regions
 that regulates expression of genes, etc.
 
 ### Why do we care?
@@ -61,7 +61,7 @@ to perform future genetic studies.
 We analyzed genetic studies of 31 diseases and complex traits from UK Biobank (Europeans)
 and Biobank Japan (East Asians). Averaging across the traits, we found that
 the cross-population genetic correlation across East Asians and Europeans was
-about 0.85%, although for some traits this quantity was much lower (e.g. ~30%
+about 85%, although for some traits this quantity was much lower (e.g. ~30%
 for major depressive disorer). This results suggest that genetic effects
 in different populations are, overall, similar to each other. But, they are
 not *exactly* the same, suggesting that genetic effects are dissimilar, in
