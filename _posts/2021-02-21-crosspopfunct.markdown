@@ -15,6 +15,8 @@ in Nature Communications that looks at the genetics of human diseases (e.g. type
 and complex traits (e.g. height, body mass index) across populations. In this
 blog post, I hope to give a simple and intuitive understanding of our work to a broad audience.
 
+(For those that are inpatient, scroll to the bottom of this page.)
+
 ### What did we study?
 
 We studied the effects genetic variants have on diseases
@@ -111,3 +113,12 @@ Since we hypothesize that gene-environment interaction is likely stronger
 in functionally important genomic regions, we also think it would be important
 for future genetic studies to collect and model environmental effects,
 to better reveal the *true* genetic effects.
+
+---
+
+We found more population-specific genetic effects in functionally important
+regions of the genome (e.g. gene regions, regions that regulate gene expression, etc.),
+compared to the rest of the genome. We found even more population-specific genetic
+effects around immune genes (genes that play important roles in the immune
+system). And we conjecture that population-specific genetic effects have something
+to do with gene-environment interactions at regions impacted by positive selection.
