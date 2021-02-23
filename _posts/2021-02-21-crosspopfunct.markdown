@@ -11,7 +11,7 @@ src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
 </script>
 
 A few days ago, we published a [paper](https://www.nature.com/articles/s41467-021-21286-1)
-on Nature Communications that looks at the genetics of human diseases (e.g. type 2 diabetes, rheumatoid arthritis)
+in Nature Communications that looks at the genetics of human diseases (e.g. type 2 diabetes, rheumatoid arthritis)
 and complex traits (e.g. height, body mass index) across populations. In this
 blog post, I hope to give a simple and intuitive understanding of our work to a broad audience.
 
@@ -19,7 +19,7 @@ blog post, I hope to give a simple and intuitive understanding of our work to a 
 
 We studied the effects genetic variants have on diseases
 and traits across different populations (East Asians and Europeans, in particular).
-In summary, we wanted to answer the following questions.
+At a high level, we wanted to answer the following questions in our work.
 
 1. How similar/dissimilar are genetic effects across different populations,
 across the entire genome?
@@ -50,10 +50,10 @@ be 50% to 80% lower compared to that for Europeans (see this [paper](https://www
 This limited cross-population transferrability is often attributed to differences in frequencies
 and correlation patterns of genetic variants in different populations. But
 we are curious if the limited transferrability can be also driven by
-specific differences in the underlying genetic effects in important part
-of the human genome (e.g. around genes). Investigating if this is indeed the
-case can provide additional understanding of the sources of limited
-cross-population transferrability, and may guide genetic researchers on how
+differences in the underlying genetic effects in some parts
+of the human genome (e.g. gene regions, regions that regulate gene expression, etc.).
+Investigating if this is indeed the case can provide additional understanding of the sources of limited
+cross-population transferrability, and may guide genetic researchers on searching for optimal strategies
 to perform future genetic studies.
 
 ### What did we find?
@@ -67,13 +67,13 @@ in different populations are, overall, similar to each other. But, they are
 not *exactly* the same, suggesting that genetic effects are dissimilar, in
 other words, population-specific, for some parts of the genome.
 
-We then looked specifically for components of the human genome that have
+We then looked for components of the human genome that have
 population-specific genetic effects. To our surprise, we found them in
 functionally important components of the genome, such as gene regions, and
 regions that regulate levels of expression of genes! This revealation is
-in direct contrast to what we expected at the beginning of this project -- we
-were expecting to find more shared genetic effects in functionally important
-regions of the genome.
+in direct contrast to what we expected at the beginning of this project -- in
+the early stages of this project, we were expecting to find more shared
+genetic effects in functionally important regions of the genome.
 
 Now that we knew there are more population-specific genetic effects around
 gene regions. We wanted to further understand what biological processes could
@@ -82,8 +82,8 @@ correlation in different subsets of gene regions. Specifically, we looked at
 regions of the genes that are specifically expressed in a tissue (e.g.
 brain, liver, spleen, etc.). From this analysis, we realized that not all
 gene regions have the same level of population-specific genetic effects.
-For example, regions of immune genes have more population-specific
-genetic effects, whereas regions of brain genes have less population-specific
+For example, regions of immune genes (genes that play important roles in the immune system)
+have more population-specific genetic effects, whereas regions of brain genes have less population-specific
 genetic effects. Since immune genes are typically associated with positive selection
 and brain genes negative selection, we conjecture that population-specific
 genetic effects have something to do with gene-environment interactions
@@ -98,12 +98,12 @@ genetic risk prediction first select some candidate genetic predictors
 based on European studies, and then apply those predictors on non-Europeans.
 These predictors tend to be around gene regions, and other functionally
 important genomic regions. This strategy of selecting predictors is intuitive,
-as genetic variants important for Europeans are also likely to be important
+as genetic variants important for Europeans are also likely important
 for non-Europeans. However, our results showing there are more
 population-specific genetic effects around gene regions, suggest that this strategy
 might not be optimal, because the effects of these predictors
 might be different on non-Europeans than they are on Europeans. A more
-accurate approach should select and prioritize genetic predictors, not only based on how important
+accurate approach should select and prioritize genetic predictors, based not only on how important
 they are in the European study, but also on how likely they will have the same effect
 in the target non-European populations.
 
